@@ -1,0 +1,77 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+variables
+{
+  message WiperMsg wp;
+  int pos=10;
+  int i=0;
+  msTimer timer_wp;  
+}
+on key 'k'
+{
+  pos=10;
+  wp.WiperStatus=pos;
+  output(wp);
+  setTimer(timer_wp,1);  
+}
+on timer timer_wp
+{  
+  if(pos==200)
+  {
+    pos=0;
+  }
+  else
+  {
+    pos=pos+10;
+    wp.WiperStatus=pos;
+  }  
+  output(wp);
+  setTimer(timer_wp,1);
+  i=0;
+  /*if(i==1)
+  {
+    cancelTimer(timer_wp);
+    i=0;
+  }*/  
+}
+on key 'f'
+{
+  i=1;
+  wp.WiperStatus=0;
+  output(wp);
+}
+/*on key 'i'
+{  
+  if(pos==100)
+  {
+    pos=0;
+    wp.WiperStatus=pos;
+    output(wp);
+    setTimer(timer_wp,200);
+  } 
+  else
+  {
+    pos=pos+10;    
+    wp.WiperStatus=pos;
+    output(wp);
+    setTimer(timer_wp,200);
+  }
+}*/
+/*on key 'd'
+{
+  if(pos==100)
+  {
+    pos=pos-10;    
+    wp.WiperStatus=pos;
+    output(wp);
+    setTimer(timer_wp,200);
+  }
+}*/
+/*on timer timer_wp
+{
+  output(wp);
+  setTimer(timer_wp,200);
+}*/

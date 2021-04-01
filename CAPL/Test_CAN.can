@@ -1,0 +1,16 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message 0x350 raw_msg1={dlc(4),byte(0)=0x2A,byte(1)=0x4E,byte(2)=0x22,byte(3)=0x21};
+  message 0x250 raw_msg2={dlc(4),byte(0)=0x2A,byte(1)=0x4E,byte(2)=0x22,byte(3)=0x21};
+}
+on start
+{
+  output(raw_msg1);
+}
+

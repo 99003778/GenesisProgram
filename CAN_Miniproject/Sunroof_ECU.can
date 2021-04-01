@@ -1,0 +1,55 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message SunroofMsg sun;
+  message ObstacleMsg ob;
+  message WiperMsg wi;
+  int var = 10;
+}
+on key 'o'
+{
+ if(var<100)
+{
+  var=var+10;
+  sun.SunroofStatus=var;
+  output(sun);
+}
+}
+on key 'c'
+{
+ if(var>0)
+{
+  var=var-10;
+  sun.SunroofStatus=var;
+  output(sun);
+}
+}
+on message ObstacleMsg
+{
+  if(this.ObstacleStatus==1)
+  {
+    sun.SunroofStatus=100;
+    output(sun);
+  }
+}
+on message WiperMsg
+{
+  if(this.WiperStatus>0)
+  {
+    sun.SunroofStatus=0;
+    output(sun);
+  }
+}
+/*on envVar SunroofI
+{
+  sun.SunroofStatus=@SunroofI;
+  output(sun);
+}*/
+
+
+  

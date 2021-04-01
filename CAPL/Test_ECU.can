@@ -1,0 +1,51 @@
+/*@!Encoding:1252*/
+includes
+{
+  
+}
+
+variables
+{
+  message BrakeMsg br;
+  message AccelerationMsg acc;
+  //message RPMStatus r;
+  int var = 10;
+}
+/*on key 'b'
+{
+  br.BrakeStatus=1;
+  output(br);
+}*/
+on sysvar PowerTrain::Brake
+{
+  br.BrakeStatus=@PowerTrain::Brake;
+  output(br);
+}
+on envVar Acceleration_Env
+{
+  acc.Acceleration=@Acceleration_Env;
+  output(acc);
+}
+
+/*on key 'a'
+{
+  if(var<2000)
+  {
+    var=var+10;
+    acc.Acceleration=var;
+    //r.RPMStatus=var/65*0.001885;
+    output(acc);
+  }
+}
+on key 'd'
+{
+  if(var>0)
+  {
+    var=var-10;
+    acc.Acceleration=var;
+    //r.RPM=var/65*0.001885;
+    output(acc);
+  }
+}*/
+
+  

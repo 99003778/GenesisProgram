@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="WiperDisplay">
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl1" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl1</Property>
+      <Property Name="Size">204, 266</Property>
+      <Property Name="Location">27, 3</Property>
+      <Property Name="StateCnt">16</Property>
+      <Property Name="SwitchValues">1;16;0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15</Property>
+      <Property Name="ImageFile">VCarWiper.bmp</Property>
+      <Property Name="SymbolConfiguration">5;2;WiperSunroof_DBC;;WiperMsg;WiperStatus;1;CAN;;-1;;;</Property>
+      <Property Name="TabIndex">0</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">268, 269</Property>
+    <Property Name="BackColor">White</Property>
+  </Object>
+</Panel>

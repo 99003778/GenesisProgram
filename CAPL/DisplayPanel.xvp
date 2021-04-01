@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Panel Type="Vector.CANalyzer.Panels.PanelSerializer, Vector.CANalyzer.Panels.Serializer, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null">
+  <Object Type="Vector.CANalyzer.Panels.Runtime.Panel, Vector.CANalyzer.Panels.Common, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="Panel" Children="Controls" ControlName="DisplayPanel">
+    <Object Type="Vector.CANalyzer.Panels.Design.SwitchControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="SwitchControl1" ControlName="Switch/Indicator">
+      <Property Name="Name">SwitchControl1</Property>
+      <Property Name="Size">78, 102</Property>
+      <Property Name="Location">539, 0</Property>
+      <Property Name="StateCnt">16</Property>
+      <Property Name="SwitchValues">1;16;0;1;2;3;4;5;6;7;8;9;10;11;12;13;14;15</Property>
+      <Property Name="ImageFile">ControlMotor.bmp</Property>
+      <Property Name="SymbolConfiguration">5;1;Transmission_DBC;;;Piston;1;;;-1;;;</Property>
+      <Property Name="TabIndex">1</Property>
+    </Object>
+    <Object Type="Vector.CANalyzer.Panels.Design.MeterControl, Vector.CANalyzer.Panels.CommonControls, Version=10.0.127.0, Culture=neutral, PublicKeyToken=null" Name="MeterControl1" ControlName="Meter">
+      <Property Name="Name">MeterControl1</Property>
+      <Property Name="Size">225, 180</Property>
+      <Property Name="Location">308, 119</Property>
+      <Property Name="ScaleMax">220</Property>
+      <Property Name="SymbolConfiguration">5;2;Transmission_DBC;;VehicleMotion;Velocity;1;CAN;;-1;;;</Property>
+    </Object>
+    <Property Name="Name">Panel</Property>
+    <Property Name="Size">620, 299</Property>
+    <Property Name="BackColor">White</Property>
+    <Property Name="ImageFileName">C:\Users\Public\Documents\Vector\CANoe\10.0 (x64)\CANoe Sample Configurations\CAN\CANSystemDemo\Panels\Bitmaps\DashboardCombi.bmp</Property>
+    <Property Name="IsProportional">True</Property>
+  </Object>
+</Panel>
